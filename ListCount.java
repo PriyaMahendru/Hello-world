@@ -8,40 +8,19 @@ import java.util.Objects;
 
 public class ListCount {
 
-	// public static void main1(String []args){
-	// List<Integer> list = Arrays.asList(9, 8, 7, 6, 9, 8, 7);
-	// int size=list.size();
-	// for(int i=0;i<size;i++)
-	// {
-	// System.out.println(list.get(i) +" "+Collections.frequency(list,(list.get(i))
-	// ));
-	// }
-	// }
 
 	public static void main(String[] args) {
 
 		List<Integer> list = Arrays.asList(9, 8, 9, 9, 6, 9, 8, 9, 7);
 
 		List<List<Integer>> groupedList = countGroupByItem(list);
-		printSummery(groupedList);
+		printSummary(groupedList);
 
-		// int size = list.size();
-		// List<List<Integer>> masterList = new ArrayList<>();
-		// int count = 0;
-		// for (int i = 0; i < size; i++) {
-		// List<Integer> sublist = new ArrayList<>();
-		// if (list.get(i) == list.get(i + 1)) {
-		// count++;
-		// sublist.add(list.get(i));
-		// }
-		// masterList.add(sublist);
-		//
-		// }
-		// System.out.println(sublist);
+		 
 
 	}
 
-	private static void printSummery(List<List<Integer>> groupedList) {
+	private static void printSummary(List<List<Integer>> groupedList) {
 		for (List<Integer> itemList : groupedList) {
 
 			System.out.println(String.format("The count of item [%s] is [%s]", itemList.get(0), itemList.size()));
